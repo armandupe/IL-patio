@@ -30,8 +30,7 @@ gulp.task("compress", () =>
 
 gulp.task("less", function() {
   return gulp
-    .src("./src/less/**/*.less")
-    .pipe(concat("styles.less"))
+    .src("./src/less/styles.less")
     .pipe(less())
     .pipe(
       autoprefixer({
