@@ -1,0 +1,61 @@
+.working-hours {
+  font-family: @primary-font-family;
+  &__container {
+    padding-left: 25px;
+  }
+  &__time {
+    width: 80%;
+  }
+  &__time,
+  &__orders {
+    font-size: 12px;
+    padding-top: 40px;
+    margin-bottom: 5px;
+  }
+  &__daily {
+    font-size: 16px;
+  }
+  &__weekend {
+    margin-bottom: 55px;
+  }
+  &__daily,
+  &__weekend,
+  &__phone {
+    display: inline-block;
+  }
+  &__mark {
+    color: @1-primary-font-color;
+  }
+  &__delivery {
+    padding-top: 23px;
+    display: inline-block;
+  }
+  &__booking,
+  &__delivery {
+    font-size: 22px;
+    color: @1-primary-font-color;
+    @media (max-width: 420px) {
+      font-size: 20px;
+    }
+    @media (max-width: 380px) {
+      font-size: 18px;
+    }
+    @media (max-width: 340px) {
+      font-size: 16px;
+    }
+  }
+  &__phone {
+    margin-top: -7px;
+    margin-bottom: 15px;
+    font-size: 30px;
+    @media (max-width: 380px) {
+      font-size: 26px;
+    }
+    @media (max-width: 340px) {
+      font-size: 24px;
+    }
+    &:last-child {
+      padding-bottom: 90px;
+    }
+  }
+}
