@@ -1,0 +1,35 @@
+/* Icons
+----------------------------------*/
+.ui-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -0.25em;
+  position: relative;
+  left: 90%;
+  text-indent: -99999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  @media (max-width: 345px) {
+    display: none;
+  }
+}
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon {
+  width: 16px;
+  height: 16px;
+  transform: scale(1.2);
+  transition-duration: 0.3s;
+}
+
+/* positioning */
+.arrow {
+  background-image: url("../images/body/menu/arrow.svg");
+}
+.arrow-active {
+  background-image: url("../images/body/menu/arrow.svg");
+  transform: rotateZ(90deg) scale(1.2);
+}

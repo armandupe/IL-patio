@@ -1,5 +1,6 @@
 .menu {
   font-family: @primary-font-family;
+
   &__restaurant,
   &__delivery,
   &__stock-events,
@@ -7,24 +8,35 @@
   &__contacts {
     font-size: 24px;
     color: @2-primary-font-color;
-    background-color: #a80d26;
+    background-color: @1-primary-font-color;
     padding: 37px 0 37px 26px;
     margin-bottom: 1px;
     &:hover {
       cursor: pointer;
     }
   }
+
+  &__restaurant,
+  &__delivery,
+  &__stock-events {
+    padding-left: 10px;
+    @media (max-width: 345px) {
+      padding-left: 26px;
+    }
+  }
+
   &__main-menu,
   &__bar-menu,
   &__special-menu,
   &__child-menu {
-    border: solid 1px #1b231f;
+    border: solid 1px @3-primary-font-color;
     font-size: 24px;
     padding: 30px 0 30px 80px;
     position: relative;
     margin-top: -1px;
     margin-bottom: 0;
   }
+
   &__main-menu {
     &::before {
       content: "";
@@ -36,6 +48,7 @@
       background-repeat: no-repeat;
     }
   }
+
   &__bar-menu {
     &::before {
       content: "";
@@ -47,6 +60,7 @@
       background-repeat: no-repeat;
     }
   }
+
   &__special-menu {
     &::before {
       content: "";
@@ -58,6 +72,7 @@
       background-repeat: no-repeat;
     }
   }
+
   &__child-menu {
     &::before {
       content: "";
@@ -69,8 +84,9 @@
       background-repeat: no-repeat;
     }
   }
+
   &__link {
-    color: #000;
+    color: @3-primary-font-color;
     transition-duration: 0.3s;
     &:hover {
       text-decoration: none;
@@ -80,13 +96,15 @@
       text-decoration: underline;
     }
   }
+
   &__payment-link,
   &__contacts-link {
     text-decoration: none;
     color: @2-primary-font-color;
     transition-duration: 0.3s;
     &:hover {
-      color: #000;
+      color: @3-primary-font-color;
     }
   }
+
 }

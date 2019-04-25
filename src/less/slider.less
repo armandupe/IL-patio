@@ -7,7 +7,7 @@
     url(../images/body/slider/bg-slider.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  &__container {
+  &_container {
     position: relative;
   }
 
@@ -29,21 +29,24 @@
     color: @2-primary-font-color;
     margin-bottom: 35px;
   }
+}
 
-  &__button {
-    border: none;
-    font-family: @primary-font-family;
-    font-size: 14px;
-    background-color: @button-background-color;
-    .border-radius(23.5px);
+.slide-button {
+  width: 200px;
+  font-family: @primary-font-family;
+  font-size: 14px;
+  background-color: @button-background-color;
+  .border-radius(23.5px);
+
+  &_container {
     margin-bottom: 165px;
   }
 
-  &__button-link {
-    color: #000;
+  &__link {
+    color: @3-primary-font-color;
     display: block;
     padding: 20px 60px;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
     &:hover {
       text-decoration: none;
       color: @1-primary-font-color;
@@ -54,14 +57,12 @@
   }
 }
 
+
 .owl-nav {
   display: flex;
   left: 70%;
   top: -15px;
   position: relative;
-  // position: absolute;
-  // top: 60%;
-  // left: 55%;
   z-index: 2;
   @media (max-width: 400px) {
     left: 65%;
@@ -81,10 +82,10 @@
   position: relative;
   &:hover {
     cursor: pointer;
-    background: #a80d26;
+    background: @1-primary-font-color;
   }
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 17px;
     left: 18px;

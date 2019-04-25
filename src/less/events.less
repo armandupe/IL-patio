@@ -4,10 +4,11 @@
     .box-shadow(0px 5px 24px 0 rgba(0, 0, 0, 0.4));
     margin-bottom: 25px;
   }
+
   &__title {
     font-family: @h3-font-family;
     font-size: 40px;
-    color: #1b231f;
+    color: @3-primary-font-color;
     position: relative;
     padding-bottom: 50px;
     margin-bottom: 0;
@@ -19,55 +20,63 @@
       width: 100px;
       height: 6px;
       border-radius: 3px;
-      background-color: #a80d26;
+      background-color: @1-primary-font-color;
     }
   }
+
   &__img {
     max-width: 100%;
     height: auto;
     margin-bottom: 30px;
   }
+
   &__heading {
     font-family: @primary-font-family;
     font-size: 18px;
-    color: #a80d26;
+    color: @1-primary-font-color;
     padding-left: 35px;
     padding-right: 10px;
   }
+
   &__date {
     font-family: @primary-font-family;
     font-size: 13px;
     color: #858585;
     padding-left: 35px;
   }
+
   &__description {
     width: 90%;
     font-family: @secondary-font-family;
     font-size: 16px;
-    color: #1b231f;
+    color: @3-primary-font-color;
     padding-left: 35px;
     padding-top: 20px;
+    padding-bottom: 30px;
   }
-  &__button {
-    border: none;
-    font-family: @primary-font-family;
-    font-size: 14px;
-    background-color: @button-background-color;
-    .border-radius(23.5px);
+
+}
+
+.events-button {
+  width: 200px;
+  font-family: @primary-font-family;
+  font-size: 14px;
+  background-color: @button-background-color;
+  .border-radius(23.5px);
+
+  &_container {
     margin-bottom: 25px;
     position: relative;
-    top: 35px;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  &__button-link {
-    color: #000;
+
+  &__link {
+    color: @3-primary-font-color;
     display: block;
-    padding: 20px 60px;
+    padding: 20px 0 20px 50px;
     transition-duration: 0.3s;
-    @media @mobile-small {
-      padding: 20px 40px;
-    }
+   
     &:hover {
       text-decoration: none;
       color: @1-primary-font-color;
@@ -76,4 +85,5 @@
       text-decoration: underline;
     }
   }
+
 }

@@ -1,12 +1,14 @@
 .footer {
   font-family: @primary-font-family;
   font-size: 20px;
-  background: #000;
+  background: @3-primary-font-color;
   color: @2-primary-font-color;
+
   &__address {
     padding-top: 40px;
     line-height: 1;
   }
+
   &__address,
   &__phone,
   &__email {
@@ -22,24 +24,28 @@
       background-repeat: no-repeat;
     }
   }
+
   &__address {
     &::before {
       top: 45px;
       background-image: url(../images/footer/placeholder.svg);
     }
   }
+
   &__phone {
     &::before {
       top: 5px;
       background-image: url(../images/footer/telephone.svg);
     }
   }
+
   &__email {
     &::before {
       top: 3px;
       background-image: url(../images/footer/envelope.svg);
     }
   }
+
   &__loyalty-programm {
     color: @2-primary-font-color;
     text-decoration: underline;
@@ -49,16 +55,21 @@
       color: @1-primary-font-color;
     }
   }
-  &__socials {
+
+}
+
+.socials {
+  &_container {
     padding-top: 60px;
     padding-bottom: 75px;
     margin-left: 10%;
   }
-  &__socials-link {
-    margin-right: 35px;
-  }
-}
 
-.footer__socials-link:hover .svg-fill {
-  fill: #0060be;
+  &__link {
+    margin-right: 35px;
+    &:hover .svg-fill {
+      fill: #0060be;
+    }
+  }
+  
 }

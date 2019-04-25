@@ -1,101 +1,38 @@
 .header {
   &__booking {
     font-family: @primary-font-family;
-    background-color: #000;
+    background-color: @3-primary-font-color;
     padding: 15px 0 15px 0;
-    align-items: center;
-  }
-  &__booking span {
     text-align: center;
+  }
+
+  &__booking-container {
+    @media (max-width: 451px) {
+      flex-direction: column;
+    }
   }
 
   &__booking-table,
   &__delivery {
     color: @1-primary-font-color;
-    font-size: 10px;
-    @media (max-width: 392px) {
-      font-size: 2vw;
+    font-size: 11px;
+    margin-right: 15px;
+    @media (max-width: 451px) {
+      font-size: 20px;
     }
-    @media (max-width: 347px) {
-      font-size: 1.8vw;
-    }
-    @media (max-width: 331px) {
-      font-size: 1.7vw;
-    }
+  }
+
+  &__delivery {
+    margin-left: 15px;
   }
 
   &__booking-table-phone,
   &__delivery-phone {
     color: @2-primary-font-color;
-    font-size: 11px;
-    @media (max-width: 460px) {
-      font-size: 2.2vw;
+    font-size: 16px;
+    @media (max-width: 451px) {
+      font-size: 22px;
     }
-    @media (max-width: 407px) {
-      font-size: 2.1vw;
-    }
-    @media (max-width: 385px) {
-      font-size: 2vw;
-    }
-    @media (max-width: 365px) {
-      font-size: 1.9vw;
-    }
-    @media (max-width: 347px) {
-      font-size: 1.8vw;
-    }
-    @media (max-width: 331px) {
-      font-size: 1.7vw;
-    }
-  }
-}
-
-.burger-menu {
-  &__container {
-    position: relative;
-    top: 25%;
-    right: 0;
-    bottom: 0;
-    left: 15%;
-    margin: auto;
-    @media @mobile {
-      top: 20%;
-    }
-    &:hover .burger-menu__line-1 {
-      transform: translateY(15px) rotateZ(45deg);
-      background-color: #a80d26;
-      @media (max-width: 380px) {
-        transform: none;
-        background-color: #000;
-      }
-    }
-    &:hover .burger-menu__line-2 {
-      transform: rotateZ(-45deg);
-      background-color: #a80d26;
-      @media (max-width: 380px) {
-        transform: none;
-        background-color: #000;
-      }
-    }
-    &:hover .burger-menu__line-3 {
-      opacity: 0;
-      @media (max-width: 380px) {
-        opacity: 1;
-      }
-    }
-  }
-  &__line-1,
-  &__line-2,
-  &__line-3 {
-    width: 50px;
-    height: 5px;
-    border-radius: 20px;
-    background-color: #000;
-    transition-duration: 0.5s;
-  }
-
-  &__line-1,
-  &__line-2 {
-    margin-bottom: 10px;
   }
 }
 
@@ -104,13 +41,17 @@
   height: auto;
 }
 
-.header-cart__img {
-  max-width: 100%;
-  height: auto;
-  position: relative;
-  top: 10px;
-  right: 15%;
-  bottom: 0;
-  left: 0;
-  margin: auto;
+.header-cart {
+  &__link {
+    margin-right: 15px;
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    top: 10px;
+    bottom: 0;
+    left: 0;
+  }
 }
