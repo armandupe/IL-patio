@@ -20,6 +20,7 @@
   &__delivery,
   &__stock-events {
     padding-left: 10px;
+    outline: none;
     @media (max-width: 345px) {
       padding-left: 26px;
     }
@@ -38,6 +39,8 @@
   }
 
   &__main-menu {
+    border-top-color: transparent;
+
     &::before {
       content: "";
       position: absolute;
@@ -74,6 +77,8 @@
   }
 
   &__child-menu {
+    border-bottom-color: transparent;
+
     &::before {
       content: "";
       position: absolute;
